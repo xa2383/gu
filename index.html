@@ -3,11 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>xu</title>
+    <title>Pr0gram.ipynb</title>
 </head>
 <body>
     <ul>
         <li><a href="4-Chapters_Content-1[2].pdf" download>manual</a></li>
+        <li>
+            <a href="p1.html" download>p1</a>
+            <button onclick="copyFileContent('p1.html')">C</button>
+        </li>
+        <li>
+            <a href="p2.html" download>p2</a>
+            <button onclick="copyFileContent('p2.html')">C</button>
+        </li>
+        <li>
+            <a href="p2b.html" download>p3</a>
+            <button onclick="copyFileContent('p2b.html')">C</button>
+        </li>
+        <li>
+            <a href="p4.html" download>p4</a>
+            <button onclick="copyFileContent('p4.html')">C</button>
+        </li>
+        <li>
+            <a href="p4b.html" download>p5</a>
+            <button onclick="copyFileContent('p4b.html')">C</button>
+        </li>
+        <li>
+            <a href="p5.html" download>p6</a>
+            <button onclick="copyFileContent('p5.html')">C</button>
+        </li>
+        <li>
+            <a href="p5b.html" download>p7</a>
+            <button onclick="copyFileContent('p5b.html')">C</button>
+        </li>
+        <li>
+            <a href="p8.php" download>p8</a>
+            <button onclick="copyFileContent('p8.php')">C</button>
+        </li>
+        <li>
+            <a href="p9.php" download>p9</a>
+            <button onclick="copyFileContent('p9.php')">C</button>
+        </li>
+        <li>
+            <a href="p10.php" download>p10</a>
+            <button onclick="copyFileContent('p10.php')">C</button>
+        </li>
     </ul>
+
+    <script>
+    function copyFileContent(filename) {
+        fetch(filename)
+            .then(response => response.text())
+            .then(text => {
+                navigator.clipboard.writeText(text).then(() => {
+                    alert('File content copied to clipboard!');
+                }, () => {
+                    alert('Failed to copy file content.');
+                });
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Failed to fetch file content.');
+            });
+    }
+    </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="4-Chapters_Content-1[2].pdf" download>manual</a></li>
